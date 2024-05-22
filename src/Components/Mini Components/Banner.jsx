@@ -19,7 +19,7 @@ const Banner = () => {
     "Timor-Leste",
   ]);
   return (
-    <div>
+    <div className="pt-12">
       {/* Banner */}
       <div className="hero min-h-screen relative">
         <video
