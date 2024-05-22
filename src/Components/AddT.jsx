@@ -40,7 +40,7 @@ const AddT = () => {
       userName,
     };
     console.log(newData);
-    fetch("http://localhost:5000/allTouristSpots", {
+    fetch("https://cholo-server.vercel.app/allTouristSpots", {
       method: "POST",
       headers: {
         "content-type": "application/json",

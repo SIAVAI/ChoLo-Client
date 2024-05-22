@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         errorElement: <Error></Error>,
-        loader: () => fetch("http://localhost:5000/allTouristSpots"),
+        loader: () => fetch("https://cholo-server.vercel.app/allTouristSpots"),
       },
       {
         path: "/login",
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
         path: "/allTourist",
         element: <AllT></AllT>,
         errorElement: <Error></Error>,
-        loader: () => fetch("http://localhost:5000/allTouristSpots"),
+        loader: () => fetch("https://cholo-server.vercel.app/allTouristSpots"),
       },
       {
         path: "/allTourist/:id",
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
         ),
         errorElement: <Error></Error>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allTouristSpots/${params.id}`),
+          fetch(`https://cholo-server.vercel.app/allTouristSpots/${params.id}`),
       },
       {
         path: "/addTourist",
@@ -72,14 +72,14 @@ const router = createBrowserRouter([
       {
         path: "/countrySectionDetails",
         element: <CountryDetails></CountryDetails>,
-        loader: () => fetch("http://localhost:5000/allTouristSpots"),
+        loader: () => fetch("https://cholo-server.vercel.app/allTouristSpots"),
         errorElement: <Error></Error>,
       },
       {
         path: "/update/:id",
         element: <Update></Update>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allTouristSpots/${params.id}`),
+          fetch(`https://cholo-server.vercel.app/allTouristSpots/${params.id}`),
         errorElement: <Error></Error>,
       },
     ],

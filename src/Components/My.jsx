@@ -21,7 +21,9 @@ const My = () => {
 
   const fetchUserTouristSpots = async (name) => {
     // Replace with your API endpoint to fetch user-specific tourist spots
-    const response = await fetch("http://localhost:5000/allTouristSpots");
+    const response = await fetch(
+      "https://cholo-server.vercel.app/allTouristSpots"
+    );
     const data = await response.json();
     const myData = data.filter((spot) => spot.userName === name);
     console.log(myData);
@@ -40,7 +42,7 @@ const My = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Replace with your API endpoint to delete a tourist spot
-        fetch(`http://localhost:5000/allTouristSpots/${id}`, {
+        fetch(`https://cholo-server.vercel.app/allTouristSpots/${id}`, {
           method: "DELETE",
         })
           .then(() => {

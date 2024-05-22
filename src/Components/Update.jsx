@@ -42,7 +42,7 @@ const Update = () => {
       userName,
     };
     //console.log(newData);
-    fetch(`http://localhost:5000/allTouristSpots/${id}`, {
+    fetch(`https://cholo-server.vercel.app/allTouristSpots/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
