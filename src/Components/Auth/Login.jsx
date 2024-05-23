@@ -1,5 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -11,6 +12,7 @@ const Login = () => {
   const { loginUser, googleSignIn, githubSignIn } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -21,7 +23,7 @@ const Login = () => {
     try {
       await loginUser(email, password);
       toast.success("Login Successful!");
-      navigate("/");
+      navigate(location?.state ? location?.state : "/");
     } catch (error) {
       Swal.fire({
         icon: "error",
@@ -35,7 +37,7 @@ const Login = () => {
     try {
       await googleSignIn();
       toast.success("Google Login Successful!");
-      navigate("/");
+      navigate(location?.state ? location?.state : "/");
     } catch (error) {
       Swal.fire({
         icon: "error",
@@ -49,7 +51,7 @@ const Login = () => {
     try {
       await githubSignIn();
       toast.success("GitHub Login Successful!");
-      navigate("/");
+      navigate(location?.state ? location?.state : "/");
     } catch (error) {
       Swal.fire({
         icon: "error",
