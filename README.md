@@ -1,5 +1,6 @@
 <h2>ChoLo - Your Ultimate Travel Companion
-Welcome to ChoLo, the ultimate travel companion website where you can explore and add tourist spots, get inspired by travel stories, and plan your next adventure with ease. Whether you are looking for breathtaking landscapes, cultural experiences, or relaxing retreats, ChoLo has it all.</h2>
+Welcome to ChoLo </h2>
+<h2>The ultimate travel companion website where you can explore and add tourist spots, get inspired by travel stories, and plan your next adventure with ease. Whether you are looking for breathtaking landscapes, cultural experiences, or relaxing retreats, ChoLo has it all.</h2>
 
 <h2>Features</h2>
 
